@@ -4,7 +4,9 @@ $focus-color: lighten(#169FFF, 20);
 $focus-outline: 2px solid $focus-color;
 $input-width: 250px;
 
-form{
+
+//All forms must have a frame-ui-form class to be able to use the form styling
+form.frame-ui-form {
     width: 340px;
     display: flex;
     flex-direction: column;
@@ -12,94 +14,13 @@ form{
     padding: 40px 40px 0 40px;
     border-radius: 10px;
     margin-bottom: 40px;
-    background: rgba($secondary-color, 0.95);
 
-    &.contact-form{
-        justify-content: center;
+    .form-input-group {
 
-        .form-heading,
-        .form-input-group{
-            margin: auto 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .form-heading{
-            color: white;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .form-input-group{
-            input.form-input{
-                width: 300px;
-                border-radius: 10px;
-                margin-bottom: 5px;
-                outline: none;
-                border: none;
-
-                &[type="submit"]{
-                    width: 320px;
-                    background: white;
-                    color: $secondary-color;
-                    border-radius: 25px;
-                    margin-bottom: 50px;
-                }
-            }
-
-            i{
-                left: 275px;
-                &.fa-mobile-alt{
-                    left: 280px;
-                }
-            }
-
-            p{
-                padding: 0;
-                margin: 10px 0;
-                color: white;
-
-            }
-
-            select {
-                width: 322px;
-                height: 45px;
-                font-size: 1rem;
-                cursor: pointer;
-                margin-bottom: 10px;
-                border: $input-outline;
-                color: darken(#CACFD2, 40);
-                option {
-                    font-size: 1rem;
-                    border: $input-outline;
-                    color: darken(#CACFD2, 40);
-                }
-                &:focus{
-                    outline: none;
-                    border: $focus-outline;
-                    transition: border 0.3s;
-                    transition: box-shadow 0.3s;
-                    box-shadow: -1px 1px 10px $focus-color;
-                }
-            }
-        }
-    }
-
-    // .form-heading,
-    // .form-input-group {
-    //     margin-right: auto;
-    // }
-    &.box-form{
-        
-        width: auto;
-        .form-heading {
-            margin-bottom: 20px;
-        }
-    }
-    
-    .form-input-group{
+        //Position relative to position icons
         position: relative;
 
-        i{
+        i {
             position: absolute;
             color: $input-color;
             padding-left: 5px;
@@ -107,6 +28,7 @@ form{
             left: $input-width - 25px;
             transition: color 0.3s;
 
+            //Added with Javascript
             &.focus-icon {
                 color: $focus-color;
                 transition: color 0.3s;
@@ -127,11 +49,13 @@ form{
             transition: border 0.3s;
             transition: box-shadow 0.3s;
 
-            &.form-input-rounded{
+
+            //Add for a rounded form input
+            &.form-input-rounded {
                 border-radius: 20px;
             }
 
-            &:focus{
+            &:focus {
                 outline: none;
                 border: $focus-outline;
                 transition: border 0.3s;
@@ -139,7 +63,7 @@ form{
                 box-shadow: -1px 1px 10px $focus-color;
             }
 
-            &[type="submit"]{
+            &[type="submit"] {
                 background: $focus-color;
                 color: white;
                 font-weight: bold;
@@ -147,44 +71,157 @@ form{
                 cursor: pointer;
                 width: $input-width + 20px;
                 height: 40px;
+                margin-top: 25px;
 
                 &.transition-3d-hover {
+                    &:hover {
+                        margin-top: 15px;
 
-                    &:hover{
+                        //margin bottom added to ensure the width of the container it is put in is not affected.
+                        margin-bottom: 10px;
                         box-shadow: -1px 1px 10px $focus-color;
                         transition: box-shadow 0.3s;
+                        transition: margin-top 0.3s ease-in;
                     }
                 }
             }
         }
     }
-}
 
-form#showcase-form {
-    background: none;
+    //for a background add a bg class
+    //basic form styling
+    //grey background, box appearance
+    &.main-form {
+        justify-content: center;
 
-    padding: 0 0 0 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    .form-input-group{
-        margin: 0 0 0 20px;
-        input.form-input[type="text"]{
-            border: none;
-            border-radius: 10px;
-            box-shadow: -1px 1px 20px $secondary-color;
-            // border-radius: 10px;
+        .form-heading,
+        .form-input-group {
+            margin: auto 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        input.form-input[type="submit"]{
-            font-weight: 400;
-            font-size: 1rem;
-            max-width: 100px;
+
+        .form-heading {
             color: $secondary-color;
-            background: white;
-            border-radius: 25px;
-            box-shadow: -1px 1px 10px $secondary-color;
-            &:hover{
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .form-input-group {
+            input.form-input {
+                width: 300px;
+                margin-bottom: 5px;
+                outline: none;
+                border: none;
+
+                &[type="text"]{
+                    background: rgba(lighten(#999, 30), 0.8);
+                    color: darken(#999, 30);
+                    font-weight: 500;
+                    &:focus{
+                    //remove default
+                       box-shadow: none;
+                    }
+                }
+
+                &[type="submit"] {
+                    width: 320px;
+                    background: $secondary-color;
+                    color: white;
+                    margin-bottom: 50px;
+                }
+            }
+
+            //input group must have fa-2x if using font awesome
+            i {
+                left: 275px;
+
+                //This icon needed a bit more to truly center
+                &.fa-mobile-alt {
+                    left: 280px;
+                }
+            }
+
+            p {
+                padding: 0;
+                margin: 10px 0;
+                color: white;
+
+            }
+
+            select {
+                width: 322px;
+                height: 45px;
+                font-size: 1rem;
+                cursor: pointer;
+                margin-bottom: 10px;
+                border: $input-outline;
+                color: darken(#CACFD2, 40);
+
+                option {
+                    font-size: 1rem;
+                    border: $input-outline;
+                    color: darken(#CACFD2, 40);
+                }
+
+                &:focus {
+                    outline: none;
+                    border: $focus-outline;
+                    transition: border 0.3s;
+                    transition: box-shadow 0.3s;
+                    box-shadow: -1px 1px 10px $focus-color;
+                }
+            }
+        }
+    }
+
+    //Shadow form
+    // No border, only box-shadow
+    // More modern appearance
+    &.shadow-form {
+        background: none;
+        padding: 0 0 0 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        //Display the form as not inline, use for multiple inputs
+        &.shadow-form-block-display {
+            flex-direction: column;
+
+            //Make the submit button the width of the input
+            //Adjust margin for centering
+            .form-input-group {
+                input.form-input[type="submit"] {
+                    width: 270px;
+                    margin: 20px 0;
+                }
+            }
+        }
+
+        .form-input-group {
+            margin: 0 0 0 20px;
+
+            input.form-input[type="text"] {
+                border: none;
+                border-radius: 10px;
                 box-shadow: -1px 1px 20px $secondary-color;
+                // border-radius: 10px;
+            }
+
+            input.form-input[type="submit"] {
+                font-weight: 400;
+                font-size: 1rem;
+                width: 100px;
+                margin: 0;
+                color: $secondary-color;
+                background: white;
+                border-radius: 25px;
+                box-shadow: -1px 1px 10px $secondary-color;
+
+                &:hover {
+                    box-shadow: -1px 1px 20px $secondary-color;
+                }
             }
         }
     }

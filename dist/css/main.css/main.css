@@ -90,81 +90,27 @@
   margin-left: 5rem;
   margin-right: 5rem; }
 
-form {
+form.frame-ui-form {
   width: 340px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 40px 40px 0 40px;
   border-radius: 10px;
-  margin-bottom: 40px;
-  background: rgba(124, 201, 255, 0.95); }
-  form.contact-form {
-    justify-content: center; }
-    form.contact-form .form-heading,
-    form.contact-form .form-input-group {
-      margin: auto 0;
-      padding: 0;
-      box-sizing: border-box; }
-    form.contact-form .form-heading {
-      color: white;
-      margin: 20px 0;
-      text-align: center; }
-    form.contact-form .form-input-group input.form-input {
-      width: 300px;
-      border-radius: 10px;
-      margin-bottom: 5px;
-      outline: none;
-      border: none; }
-      form.contact-form .form-input-group input.form-input[type="submit"] {
-        width: 320px;
-        background: white;
-        color: #7cc9ff;
-        border-radius: 25px;
-        margin-bottom: 50px; }
-    form.contact-form .form-input-group i {
-      left: 275px; }
-      form.contact-form .form-input-group i.fa-mobile-alt {
-        left: 280px; }
-    form.contact-form .form-input-group p {
-      padding: 0;
-      margin: 10px 0;
-      color: white; }
-    form.contact-form .form-input-group select {
-      width: 322px;
-      height: 45px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-bottom: 10px;
-      border: 2px solid #CACFD2;
-      color: #606a70; }
-      form.contact-form .form-input-group select option {
-        font-size: 1rem;
-        border: 2px solid #CACFD2;
-        color: #606a70; }
-      form.contact-form .form-input-group select:focus {
-        outline: none;
-        border: 2px solid #7cc9ff;
-        transition: border 0.3s;
-        transition: box-shadow 0.3s;
-        box-shadow: -1px 1px 10px #7cc9ff; }
-  form.box-form {
-    width: auto; }
-    form.box-form .form-heading {
-      margin-bottom: 20px; }
-  form .form-input-group {
+  margin-bottom: 40px; }
+  form.frame-ui-form .form-input-group {
     position: relative; }
-    form .form-input-group i {
+    form.frame-ui-form .form-input-group i {
       position: absolute;
       color: #CACFD2;
       padding-left: 5px;
       top: 17px;
       left: 225px;
       transition: color 0.3s; }
-      form .form-input-group i.focus-icon {
+      form.frame-ui-form .form-input-group i.focus-icon {
         color: #7cc9ff;
         transition: color 0.3s; }
-    form .form-input-group input.form-input {
+    form.frame-ui-form .form-input-group input.form-input {
       border: 2px solid #CACFD2;
       margin-top: 10px;
       width: 250px;
@@ -177,48 +123,110 @@ form {
       display: block;
       transition: border 0.3s;
       transition: box-shadow 0.3s; }
-      form .form-input-group input.form-input.form-input-rounded {
+      form.frame-ui-form .form-input-group input.form-input.form-input-rounded {
         border-radius: 20px; }
-      form .form-input-group input.form-input:focus {
+      form.frame-ui-form .form-input-group input.form-input:focus {
         outline: none;
         border: 2px solid #7cc9ff;
         transition: border 0.3s;
         transition: box-shadow 0.3s;
         box-shadow: -1px 1px 10px #7cc9ff; }
-      form .form-input-group input.form-input[type="submit"] {
+      form.frame-ui-form .form-input-group input.form-input[type="submit"] {
         background: #7cc9ff;
         color: white;
         font-weight: bold;
         border: none;
         cursor: pointer;
         width: 270px;
-        height: 40px; }
-        form .form-input-group input.form-input[type="submit"].transition-3d-hover:hover {
+        height: 40px;
+        margin-top: 25px; }
+        form.frame-ui-form .form-input-group input.form-input[type="submit"].transition-3d-hover:hover {
+          margin-top: 15px;
+          margin-bottom: 10px;
           box-shadow: -1px 1px 10px #7cc9ff;
-          transition: box-shadow 0.3s; }
-
-form#showcase-form {
-  background: none;
-  padding: 0 0 0 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-  form#showcase-form .form-input-group {
-    margin: 0 0 0 20px; }
-    form#showcase-form .form-input-group input.form-input[type="text"] {
-      border: none;
-      border-radius: 10px;
-      box-shadow: -1px 1px 20px #7cc9ff; }
-    form#showcase-form .form-input-group input.form-input[type="submit"] {
-      font-weight: 400;
-      font-size: 1rem;
-      max-width: 100px;
+          transition: box-shadow 0.3s;
+          transition: margin-top 0.3s ease-in; }
+  form.frame-ui-form.main-form {
+    justify-content: center; }
+    form.frame-ui-form.main-form .form-heading,
+    form.frame-ui-form.main-form .form-input-group {
+      margin: auto 0;
+      padding: 0;
+      box-sizing: border-box; }
+    form.frame-ui-form.main-form .form-heading {
       color: #7cc9ff;
-      background: white;
-      border-radius: 25px;
-      box-shadow: -1px 1px 10px #7cc9ff; }
-      form#showcase-form .form-input-group input.form-input[type="submit"]:hover {
+      margin: 20px 0;
+      text-align: center; }
+    form.frame-ui-form.main-form .form-input-group input.form-input {
+      width: 300px;
+      margin-bottom: 5px;
+      outline: none;
+      border: none; }
+      form.frame-ui-form.main-form .form-input-group input.form-input[type="text"] {
+        background: rgba(230, 230, 230, 0.8);
+        color: #4d4d4d;
+        font-weight: 500; }
+        form.frame-ui-form.main-form .form-input-group input.form-input[type="text"]:focus {
+          box-shadow: none; }
+      form.frame-ui-form.main-form .form-input-group input.form-input[type="submit"] {
+        width: 320px;
+        background: #7cc9ff;
+        color: white;
+        margin-bottom: 50px; }
+    form.frame-ui-form.main-form .form-input-group i {
+      left: 275px; }
+      form.frame-ui-form.main-form .form-input-group i.fa-mobile-alt {
+        left: 280px; }
+    form.frame-ui-form.main-form .form-input-group p {
+      padding: 0;
+      margin: 10px 0;
+      color: white; }
+    form.frame-ui-form.main-form .form-input-group select {
+      width: 322px;
+      height: 45px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 10px;
+      border: 2px solid #CACFD2;
+      color: #606a70; }
+      form.frame-ui-form.main-form .form-input-group select option {
+        font-size: 1rem;
+        border: 2px solid #CACFD2;
+        color: #606a70; }
+      form.frame-ui-form.main-form .form-input-group select:focus {
+        outline: none;
+        border: 2px solid #7cc9ff;
+        transition: border 0.3s;
+        transition: box-shadow 0.3s;
+        box-shadow: -1px 1px 10px #7cc9ff; }
+  form.frame-ui-form.shadow-form {
+    background: none;
+    padding: 0 0 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    form.frame-ui-form.shadow-form.shadow-form-block-display {
+      flex-direction: column; }
+      form.frame-ui-form.shadow-form.shadow-form-block-display .form-input-group input.form-input[type="submit"] {
+        width: 270px;
+        margin: 20px 0; }
+    form.frame-ui-form.shadow-form .form-input-group {
+      margin: 0 0 0 20px; }
+      form.frame-ui-form.shadow-form .form-input-group input.form-input[type="text"] {
+        border: none;
+        border-radius: 10px;
         box-shadow: -1px 1px 20px #7cc9ff; }
+      form.frame-ui-form.shadow-form .form-input-group input.form-input[type="submit"] {
+        font-weight: 400;
+        font-size: 1rem;
+        width: 100px;
+        margin: 0;
+        color: #7cc9ff;
+        background: white;
+        border-radius: 25px;
+        box-shadow: -1px 1px 10px #7cc9ff; }
+        form.frame-ui-form.shadow-form .form-input-group input.form-input[type="submit"]:hover {
+          box-shadow: -1px 1px 20px #7cc9ff; }
 
 .bg-showcase {
   height: auto;
