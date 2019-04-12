@@ -1,0 +1,44 @@
+section#contact {
+    .contact-row {
+        overflow: hidden;
+        margin: 0;
+
+        .contact-info-side {
+            .contact-info-side-overlay {
+                padding: 0;
+                height: 550px;
+                
+                position: relative;
+
+                .contact-info-side-content {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 20px;
+                    background: rgba(white, 0.99);
+                    width: 50%;
+                    box-shadow: -1px 1px 10px $secondary-color;
+
+                    .contact-info-side-heading {
+                        margin: 0;
+                        text-align: center;
+                        color: darken($secondary-color, 10);
+                    }
+
+                    .contact-info-side-p {
+                        margin: 0;
+                        color: darken($input-color, 30);
+                        line-height: 2;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            .contact-form-side {
+                overflow-x: hidden;
+                background: #66a6ff;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "css-framework",
+  "version": "1.0.0",
+  "description": "My own css framework",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w dist/scss/ -o dist/css/main.css --recursive"
+  },
+  "author": "Ben Dominguez",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

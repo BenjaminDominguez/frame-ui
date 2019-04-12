@@ -1,0 +1,61 @@
+$secondary-color: lighten(#169FFF, 20);
+$primary-color: #7474BF;
+$navbar-secondary-color: $secondary-color;
+$astroid-gradient: radial-gradient(#0F2027, #203A43, #2C5364);
+$kimody-gradient: radial-gradient(#396afc, #2948ff);
+$deep-space-gradient: radial-gradient(#000000, #434343);
+$midnight-city-gradient: radial-gradient(#232526, #414345);
+$nice-gradient: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+
+.bg{
+
+    &-nice{
+    background: $nice-gradient;
+    }
+    &-black{
+        background: rgba(26, 25, 25, 0.99);
+    }
+
+    &-primary{
+        background: $primary-color;
+    }
+    
+    &-secondary{
+        background: $secondary-color;
+    }
+
+    &-secondary-dark{
+        background: #169FFF;
+    }
+    &-sleek-grey{
+        background: #404040;
+    }
+    &-astroid {
+        background: $astroid-gradient;
+    }
+
+    &-kimody {
+    background: $kimody-gradient;
+    }
+
+   &-deep-space {
+    background: $deep-space-gradient;
+    }
+    &-midnight{
+        background: $midnight-city-gradient;
+    }
+
+    &-transparent {
+        background: rgba(white, 0);
+    }
+}
+
+.font{
+    &-secondary-dark{
+        color: #169fff;
+    }
+    &-white{
+        color: white;
+    }
+
+}

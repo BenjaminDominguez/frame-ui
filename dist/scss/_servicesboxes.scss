@@ -1,0 +1,36 @@
+$service-box-gradient: $nice-gradient;
+
+section#services{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.services-boxes{
+    .services-box{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 40px;
+
+        p{
+            font-size: 1.5rem;
+            text-align: center;
+            color: white;
+        }
+
+        i{
+            color: white;
+            margin: auto;
+        }
+        &-1{
+            background: $service-box-gradient;
+        }
+        &-2{
+            background: $service-box-gradient;
+        }
+        &-3{
+            background: $service-box-gradient;
+        }
+    }
+}
